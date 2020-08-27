@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+/* Test api routing */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.send('Welcome to your express server! Start creating and editing your api routes in the server/api folder.');
 });
 
 module.exports = router;
