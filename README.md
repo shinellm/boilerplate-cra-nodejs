@@ -1,10 +1,15 @@
 # Boilerplate: create-react-app with a custom Node Server
 
-This is a simple website boilerplate that uses a [React](https://github.com/facebook/create-react-app) frontend and a custom Node backend (server for API, proxy, & routing). This can be used as a starting point for projects, which are intended to be deployed to a hosting service such as Heroku. 
+This is a simple website boilerplate that uses a [React](https://github.com/facebook/create-react-app) frontend and a custom Node backend (server for API, proxy, & routing).
+
+* 🗂 [File Layout](#user-content-file-layout)
+* 💻 [Local Development](#user-content-local-development)
+
+This boilerplate can be used as a starting point for projects, which are intended to be deployed to a hosting service such as Heroku or other fullstack applications. 
 
 ## File Layout
 
-This boilerplate consists of a client folder, which contains the React frontend UI, and a server folder, which contains the Node backend server. The boilerplate is a combination of two npm projects, so there are two `package.json` configs and therefore two places to run `npm` commands:
+This project consists of a client folder, which contains the React frontend UI, and a server folder, which contains the Node backend server. The boilerplate is a combination of two npm projects, so there are two `package.json` configs and therefore two places to run `npm` commands:
 
   1. [**Node server**](server/): [`./package.json`](package.json)
       * contains express starter code in the [`server/app.js`](server/app.js) file
@@ -20,6 +25,15 @@ Because this app is made of two npm projects, there are two places to run `npm` 
 1. **Node API Server** at the root `./`
 2. **React Frontend UI** in `client/` directory.
 
+**Note:** To simplify this process, `"npm-run-all"` was added to the devDependencies. Local development can instead be started at the root `./` by running:
+```bash
+# Initial setup
+npm install
+
+# Start the backend and frontend servers
+npm run dev
+```
+
 ### Run the Node API Server
 
 In a terminal:
@@ -28,11 +42,11 @@ In a terminal:
 # Initial setup
 npm install
 
-# Start the server
+# Start the server at http://localhost:8080/
 npm start
 ```
 
-#### Install new npm packages for Node
+Install new npm packages for Node:
 
 ```bash
 npm install package-name --save
@@ -52,11 +66,11 @@ cd client/
 # Initial setup
 npm install
 
-# Start the server
+# Start the server http://localhost:3000/
 npm start
 ```
 
-#### Install new npm packages for React Frontend UI
+Install new npm packages for React Frontend UI:
 
 ```bash
 # Always change directory, first
