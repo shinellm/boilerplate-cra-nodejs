@@ -29,7 +29,7 @@ Because this app is made of two npm projects, there are two places to run `npm` 
 1. **Node API Server** at the root `./`
 2. **React Frontend UI** in `client/` directory.
 
-**Note:** To simplify this process, `"npm-run-all"` was added to the devDependencies. Local development can instead be started at the root `./` by running:
+📝 **Note:** To simplify this process, `"npm-run-all"` was added to the devDependencies. Local development can instead be started at the root `./` by running:
 ```bash
 # Initial setup
 npm install
