@@ -1,4 +1,4 @@
-# Boilerplate: create-react-app with a custom Node Server
+# create-react-app with a custom Node Server
 
 This is a simple website boilerplate that uses a [React](https://github.com/facebook/create-react-app) frontend and a custom Node backend (server for API, proxy, & routing).
 
