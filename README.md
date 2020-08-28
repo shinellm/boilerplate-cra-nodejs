@@ -6,6 +6,10 @@ This is a simple website boilerplate that uses a [React](https://github.com/face
 * 💻 [Local Development](#user-content-local-development)
 
 This boilerplate can be used as a starting point for projects, which are intended to be deployed to a hosting service such as Heroku or other fullstack applications. 
+#### 📚 Helpful Links/Projects to Reference
+* [Deploying create-react-app](https://create-react-app.dev/docs/deployment/)
+* [React Production Deployment on Netlify, Vercel and Heroku](https://github.com/esausilva/react-production-deployment)
+* [create-react-app with a Node server on Heroku](https://github.com/mars/heroku-cra-node)
 
 ## File Layout
 
