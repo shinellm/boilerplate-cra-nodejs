@@ -7,7 +7,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-  res.send(`This message is sent from the post route: ${req.body.post}`)
+  res.send(`This message is sent from the Express post route: ${req.body.post}`)
 })
 
 module.exports = router;
