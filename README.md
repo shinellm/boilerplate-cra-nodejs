@@ -3,7 +3,7 @@
 This is a simple website boilerplate that uses a [React](https://github.com/facebook/create-react-app) frontend and a custom Node backend (server for API, proxy, & routing).
 
 * 🗂 [File Layout](#user-content-file-layout)
-* 👾 [App Demo](##user-content-app-demo)
+* 👾 [App Demo](#user-content-app-demo)
 * 💻 [Local Development](#user-content-local-development)
 
 This boilerplate can be used as a starting point for projects, which are intended to be deployed to a hosting service such as Heroku or other fullstack applications. 
@@ -32,6 +32,8 @@ A small demo is included in this project. In the [`api/index.js`](server/api/ind
 * The app also has client side routing using the React Router, which navigates the user to a 404 page when a URL that does not exist is entered.
 
 You can see a small demo of the app below:
+
+![React App Demo](https://i.imgur.com/jpV80B5.gif "React App Demo")
 
 ## Local Development
 
