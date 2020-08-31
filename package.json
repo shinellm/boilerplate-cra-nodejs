@@ -35,8 +35,9 @@
     "node": "14.7.0",
     "npm": "6.14.7"
   },
-  "author": {
-    "name": "Shinell Manwaring"
-  },
+  "contributors": [
+    "Shinell Manwaring (https://shinellmanwaring.com/)",
+    "Ayarza Manwaring (https://ayarzamanwaring.com/)"
+  ],
   "license": "MIT"
 }
