@@ -27,13 +27,13 @@ class Home extends React.Component {
   constructor() {
     super();
     this.state = {
-      response: "",
       post: "",
-      responseToPost: "",
+      responseToPost: ""
     };
     this.onPostChange = this.onPostChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
   onPostChange(event) {
     this.setState({ post: event.target.value });
   }
@@ -77,7 +77,6 @@ class Home extends React.Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          {this.state.response}
           <a
             className="App-link"
             href="https://reactjs.org"
