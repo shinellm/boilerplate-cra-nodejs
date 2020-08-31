@@ -66,7 +66,6 @@ class Home extends React.Component {
     });
     const body = await response.text();
     this.setState({ responseToPost: body });
-    console.log(this.state.responseToPost);
   };
 
   render() {
