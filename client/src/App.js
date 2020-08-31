@@ -6,12 +6,19 @@ import "./App.css";
 
 import notFound from "./sand.svg";
 
-const NewPage = () => <h1 >Welcome! You have navigated to a new page</h1>;
+const NewPage = () => {
+  return (
+    <div className="newPage">
+      <h1>Welcome! You have navigated to a new page</h1>
+    </div>
+  )
+};
 const NotFound = () => {
   return (
-    <div>
-      <h1>404 Page Not Found: You have navigated to a page that doesn't exist</h1>
-      <notFound />
+    <div className="notFound">
+      <h1>404 Page Not Found</h1>
+      <p>You have navigated to a page that doesn't exist</p>
+      <img src={notFound} alt="404image" />
     </div>
   )
 };
@@ -59,6 +66,7 @@ class Home extends React.Component {
     });
     const body = await response.text();
     this.setState({ responseToPost: body });
+    console.log(this.state.responseToPost);
   };
 
   render() {
@@ -79,9 +87,10 @@ class Home extends React.Component {
             Learn React
           </a>
           <br></br>
+          <p>Post to Backend Server</p>
           <form className="testForm" onSubmit={this.handleSubmit}>
             <div>
-              <label htmlFor="boilerplate_example">Message</label>
+              <label htmlFor="boilerplate_example">Message:</label>
               <input
                 type="post"
                 value={this.state.post}
@@ -101,23 +110,21 @@ export default class App extends React.Component {
   render() {
     return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/newPage">New Page</Link>
-            </li>
-          </ul>
-        </nav>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/newPage" component={NewPage} />
-            <Route component={NotFound} />
-          </Switch>
-      </div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/newPage">New Page</Link>
+          </li>
+        </ul>
+      </nav>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/newPage" component={NewPage} />
+        <Route component={NotFound} />
+      </Switch>
     </Router>
     )
   }
