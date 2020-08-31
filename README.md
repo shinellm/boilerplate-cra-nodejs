@@ -28,8 +28,8 @@ This project consists of a client folder, which contains the React frontend UI, 
 A small demo is included in this project. In the [`api/index.js`](server/api/index.js) file of the Node Server, there is one `POST` route and one `GET` route.
 
 * The `GET` route returns “Welcome to your express server! Start creating and editing your api routes in the server/api folder.” If you navigate to the Node Server url, the message will be displayed.
-* The `POST` route returns “POST request received! This is the message that was sent: [user input]”. When submitting the form found on the homepage of the app, React calls the Express.js POST route and displays the message.
-* The app also has client side routing using the React Router, which navigates the user to a 404 page when a URL that does not exist is entered.
+* The `POST` route returns “POST request received! This is the message that was sent: [user input]”. When submitting the form found on the homepage of the app, React calls the Express.js `POST` route and displays the message.
+* The app also has [client side routing](client/src/App.js) using the React Router, which navigates the user to a `404 page` when a URL that does not exist is entered.
 
 You can see a small demo of the app below:
 
