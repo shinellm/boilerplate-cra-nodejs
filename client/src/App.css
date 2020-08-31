@@ -42,3 +42,11 @@ h1 {
     align-items: center;
     justify-content: center
 }
+
+.testForm div label {
+  margin-right: 8px;
+}
+
+.testForm div input {
+  margin-right: 4px;
+}

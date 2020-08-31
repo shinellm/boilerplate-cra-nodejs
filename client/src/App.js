@@ -4,9 +4,17 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
 
+import notFound from "./sand.svg";
 
 const NewPage = () => <h1 >Welcome! You have navigated to a new page</h1>;
-const NotFound = () => <h1>404 Page Not Found: You have navigated to a page that doesn't exist</h1>;
+const NotFound = () => {
+  return (
+    <div>
+      <h1>404 Page Not Found: You have navigated to a page that doesn't exist</h1>
+      <notFound />
+    </div>
+  )
+};
 
 class Home extends React.Component {
   constructor() {
@@ -22,10 +30,11 @@ class Home extends React.Component {
   onPostChange(event) {
     this.setState({ post: event.target.value });
   }
+
   /*
-This is a mock get request it will return The info in the post request and the express route.
-It is a demonstration of an AJAX using the axios library
-*/
+  This is a mock GET request it will return the info in the POST request and the express route.
+  It is a demonstration of an AJAX using the axios library
+  */
   async componentDidMount() {
     const response = await axios.get("/api/");
     const body = await response;
@@ -36,7 +45,7 @@ It is a demonstration of an AJAX using the axios library
   }
 
   /* 
-  This is a mock post request.
+  This is a mock POST request.
   It is a demonstration of an AJAX call using the fetch API
   */
   handleSubmit = async (e) => {
@@ -49,7 +58,6 @@ It is a demonstration of an AJAX using the axios library
       body: JSON.stringify({ post: this.state.post }),
     });
     const body = await response.text();
-    console.log(body);
     this.setState({ responseToPost: body });
   };
 
@@ -70,7 +78,8 @@ It is a demonstration of an AJAX using the axios library
           >
             Learn React
           </a>
-          <form onSubmit={this.handleSubmit}>
+          <br></br>
+          <form className="testForm" onSubmit={this.handleSubmit}>
             <div>
               <label htmlFor="boilerplate_example">Message</label>
               <input
@@ -78,10 +87,10 @@ It is a demonstration of an AJAX using the axios library
                 value={this.state.post}
                 onChange={this.onPostChange}
               />
+              <button type="submit">Submit</button>
             </div>
-            <button type="submit">Submit</button>
           </form>
-          {this.state.responseToPost}
+          <p>{this.state.responseToPost}</p>
         </header>
       </div>
     );
