@@ -42,15 +42,6 @@ Because this app is made of two npm projects, there are two places to run `npm` 
 1. **Node API Server** at the root `./`
 2. **React Frontend UI** in `client/` directory.
 
-* 📝 **Note:** To simplify this process, `"npm-run-all"` was added to the devDependencies. Local development can instead be started at the root `./` via [`"dev"` script](/package.json):
-```bash
-# Initial setup
-npm install
-
-# Start the backend and frontend servers
-npm run dev
-```
-
 ### Run the Node API Server
 
 In a terminal:
@@ -63,13 +54,6 @@ npm install
 npm start
 ```
 
-Install new npm packages for Node:
-
-```bash
-npm install package-name --save
-```
-
-
 ### Run the React Frontend UI
 
 The React app is configured to proxy backend requests to the local Node server. (See [`"proxy"` config](client/package.json))
@@ -80,14 +64,33 @@ In a separate terminal from the API server, start the UI:
 # Always change directory, first
 cd client/
 
-# (Optional) If you are missing the production `client/build/` folder, run
-npm run build
-
 # Initial setup
 npm install
 
 # Start the server http://localhost:3000/
 npm start
+```
+
+### Run both the Node API server and React Frontend UI
+
+📝 **Note:** To simplify the process for starting the API and Frontend server, `"npm-run-all"` was added to the devDependencies. 
+
+Local development can instead be started at the root `./` via [`"dev"` script](/package.json) by doing the following:
+
+```bash
+# Initial setup
+npm install
+
+# Start the backend and frontend servers
+npm run dev
+```
+
+## How to install new npm packages
+
+Install new npm packages for Node:
+
+```bash
+npm install package-name --save
 ```
 
 Install new npm packages for React Frontend UI:
