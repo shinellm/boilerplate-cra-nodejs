@@ -80,6 +80,9 @@ In a separate terminal from the API server, start the UI:
 # Always change directory, first
 cd client/
 
+# (Optional) If you are missing the production `client/build/` folder, run
+npm run build
+
 # Initial setup
 npm install
 
